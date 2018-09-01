@@ -22,7 +22,7 @@ def Register_to_Server2():
     mac_address = Get_Mac_Value()
 
     s.connect((server2_ip, server2_port))
-    s.send(mac_address)
+    s.send(str(mac_address))
 
     Device_ID, Device_password = s.recv(1024).split(" ")
     Save_Information(Device_ID, Device_password)
