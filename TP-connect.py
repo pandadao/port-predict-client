@@ -25,10 +25,12 @@ def Server1_getport():
     s.close()
     return port1_get_from_server1, public_IP_get_from_server1
 
+
+# Get the device mac address.
 def Get_Mac_Value():
     mac = get_mac()
     return mac
-
+    
 
 '''
 This part is to get port from server2 and send the port get from server1, so that server2 can have two port to predict
@@ -53,7 +55,7 @@ def Server2_getport(port1_get_from_server1, public_IP_get_from_server1):
 
 
 
-def main(self):
+def main():
     port1_get_from_server1, public_IP_get_from_server1 = Server1_getport()
 #    print "main information of port and IP: " + port1_get_from_server1 + " " + public_IP_get_from_server1
 
