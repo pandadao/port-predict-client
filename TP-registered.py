@@ -6,7 +6,7 @@ from uuid import getnode as get_mac
 
 def Get_Mac_Value():
     mac = get_mac()
-    return mac
+    return str(mac)
 
 def Save_Information(Device_ID, Device_password):
     f = open('IDuse.txt', 'w')
@@ -26,7 +26,7 @@ def Register_to_Server2():
 
     Device_ID, Device_password = s.recv(1024).split(" ")
     Save_Information(Device_ID, Device_password)
-    print "The device ID and password is "+ Device_ID + " " + Device_password   #Need to save this information
+    print "The device ID and password is "+ Device_ID + " " + str(Device_password)   #Need to save this information
     s.close
 
 def main():

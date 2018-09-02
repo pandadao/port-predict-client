@@ -29,8 +29,8 @@ def Server1_getport():
 # Get the device mac address.
 def Get_Mac_Value():
     mac = get_mac()
-    return mac
-    
+    return str(mac)
+
 
 '''
 This part is to get port from server2 and send the port get from server1, so that server2 can have two port to predict
